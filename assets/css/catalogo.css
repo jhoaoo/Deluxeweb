@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.logo-main {
+    max-width: 600px;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0f0f0f url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      width: 100vw;
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #444;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo-search {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex: 1;
+    }
+
+    .nav-logo img {
+      height: 80px;
+      filter: drop-shadow(0 0 8px rgba(255, 0, 89, 0.6));
+    }
+
+    .nav-search input {
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      background-color: #1a1a1a;
+      color: white;
+      font-size: 14px;
+      width: 200px;
+      box-shadow: 0 0 10px rgba(255, 0, 89, 0.3);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      flex: 2;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #ff0059;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .catalogo-container {
+      padding-top: 160px;
+      max-width: 1200px;
+      margin: auto;
+      padding-inline: 20px;
+    }
+
+    /* CARRUSEL 3D TIPO VITRINA */
+    .carousel3d {
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      margin: 0 auto 80px;
+      perspective: 1200px;
+    }
+
+    .carousel3d-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCarousel 20s infinite linear;
+    }
+
+    .carousel3d-item {
+      position: absolute;
+      width: 200px;
+      height: 250px;
+      top: 25px;
+      left: 100px;
+      transform-style: preserve-3d;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 30px rgba(255, 0, 89, 0.4);
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+      overflow: hidden;
+    }
+
+    .carousel3d-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes rotateCarousel {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(-360deg); }
+    }
+
+    /* RESTO DE PRODUCTOS */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 80px;
+    }
+
+    .producto {
+      width: 250px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 0, 89, 0.4);
+      transition: transform 0.3s;
+      position: relative;
+    }
+
+    .producto:hover {
+      transform: scale(1.05);
+    }
+
+    .producto img {
+      width: 100%;
+      transition: opacity 0.3s;
+    }
+
+    .producto:hover img:nth-child(1) {
+      opacity: 0;
+    }
+
+    .producto:hover img:nth-child(2) {
+      opacity: 1;
+    }
+
+    .producto img:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .producto-info {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .producto-info h4 {
+      margin-bottom: 5px;
+    }
+
+    .producto-info p {
+      color: #ff0059;
+    }
+
+    .ver-mas-menos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .ver-mas-menos button {
+      background-color: #ff0059;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-family: 'Orbitron', sans-serif;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 0, 89, 0.5);
+    }
